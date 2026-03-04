@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tres Bien Nail Salon — Glenview, IL</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#ffffff;--text:#111111;--mid:#666;--accent:#8BAF8B;--accent-light:#e8f0e8;--border:#e5e5e5}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-weight:400;line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav-logo{font-size:1.1rem;font-weight:600;letter-spacing:0.02em;text-decoration:none;color:var(--text)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--mid);font-size:0.9rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);transition:all 0.3s}
+@media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem 2rem;gap:1.2rem;border-bottom:1px solid var(--border)}.nav-links.open{display:flex}.hamburger{display:flex}}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 4rem;background:linear-gradient(160deg,#fff 0%,var(--accent-light) 100%)}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:600;line-height:1.15;margin-bottom:1.2rem;letter-spacing:-0.02em}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.1rem;color:var(--mid);max-width:480px;margin:0 auto 2rem}
+.btn{display:inline-block;padding:0.9rem 2.4rem;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;font-size:0.95rem;letter-spacing:0.03em;border-radius:2px;transition:opacity 0.2s}
+.btn:hover{opacity:0.85}
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:0.6rem}
+.section-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;margin-bottom:1rem;letter-spacing:-0.02em}
+.section-subtitle{color:var(--mid);max-width:520px;margin-bottom:3rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem}
+.service-card{border:1px solid var(--border);padding:2rem;border-radius:4px;transition:border-color 0.2s}
+.service-card:hover{border-color:var(--accent)}
+.service-icon{font-size:1.8rem;margin-bottom:1rem}
+.service-card h3{font-size:1.05rem;font-weight:600;margin-bottom:0.4rem}
+.service-card p{font-size:0.9rem;color:var(--mid)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+.about-text p{color:var(--mid);margin-bottom:1rem;font-size:1.05rem}
+.stat-row{display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap}
+.stat h3{font-size:2rem;font-weight:700;color:var(--accent)}
+.stat p{font-size:0.85rem;color:var(--mid)}
+.hours-table{width:100%;max-width:480px;border-collapse:collapse}
+.hours-table tr{border-bottom:1px solid var(--border)}
+.hours-table td{padding:0.8rem 0;font-size:0.95rem}
+.hours-table td:last-child{text-align:right;color:var(--mid)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-info p{color:var(--mid);margin-bottom:0.5rem;font-size:0.95rem}
+.contact-info a{color:var(--accent);text-decoration:none;font-weight:500}
+iframe{width:100%;height:280px;border:none;border-radius:4px;margin-top:1rem}
+footer{background:#111;color:#aaa;text-align:center;padding:2rem;font-size:0.85rem}
+footer span{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">Tres Bien Nail Salon</a>
+  <button class="hamburger" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#hours">Hours</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <p class="section-label">Glenview's Nail Studio</p>
+  <h1>Beautiful Nails,<br><span>Every Time.</span></h1>
+  <p>Premium nail care in a calm, welcoming environment. Walk-ins welcome.</p>
+  <a href="#book" class="btn">Book Appointment</a>
+</section>
+
+<section id="services">
+  <div class="container">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">From classic manicures to intricate nail art — we do it all with care and precision.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">💅</div><h3>Manicure</h3><p>Classic, spa, and express options to keep your hands looking their best.</p></div>
+      <div class="service-card"><div class="service-icon">🦶</div><h3>Pedicure</h3><p>Relaxing foot treatments with exfoliation, massage, and polish.</p></div>
+      <div class="service-card"><div class="service-icon">✨</div><h3>Gel Nails</h3><p>Long-lasting gel polish with a glossy finish that stays chip-free for weeks.</p></div>
+      <div class="service-card"><div class="service-icon">💎</div><h3>Acrylic Nails</h3><p>Durable acrylic extensions in any shape and length you desire.</p></div>
+      <div class="service-card"><div class="service-icon">🌸</div><h3>Dip Powder</h3><p>Lightweight, odor-free dip powder for strong, vibrant nails.</p></div>
+      <div class="service-card"><div class="service-icon">🎨</div><h3>Nail Art</h3><p>Custom designs, ombré, chrome, and everything in between.</p></div>
+      <div class="service-card"><div class="service-icon">🪷</div><h3>Waxing</h3><p>Quick and gentle waxing services for smooth, clean results.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:#f9f9f9">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">Your Local Nail Spot</h2>
+        <div class="about-text">
+          <p>Tres Bien Nail Salon has been serving the Glenview community with friendly, skilled nail care that keeps clients coming back. We treat every client like family and every nail like a work of art.</p>
+          <p>Located on Patriot Blvd, we're easy to reach with free parking and a relaxed, welcoming atmosphere.</p>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><h3>10+</h3><p>Years serving Glenview</p></div>
+          <div class="stat"><h3>★ 4.5</h3><p>Google rating</p></div>
+        </div>
+      </div>
+      <div style="background:var(--accent-light);height:320px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:4rem">💅</div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="container">
+    <p class="section-label">When To Visit</p>
+    <h2 class="section-title">Hours</h2>
+    <table class="hours-table">
+      <tr><td>Monday – Friday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+      <tr><td>Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" style="background:#f9f9f9">
+  <div class="container">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">Contact & Location</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>📍 2737 Pfingsten Rd, Glenview, IL 60026</p>
+        <p>📞 <a href="tel:8475629004">(847) 562-9004</a></p>
+        <p>Walk-ins welcome · Free parking available</p>
+        <br>
+        <a href="#book" class="btn">Book Appointment</a>
+      </div>
+      <div>
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFmBWY&q=1362+Patriot+Blvd,Glenview,IL+60026" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <span>Tres Bien Nail Salon</span>. All rights reserved. · 2737 Pfingsten Rd, Glenview, IL</p>
+</footer>
+</body>
+</html>
